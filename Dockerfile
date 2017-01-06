@@ -3,9 +3,9 @@ MAINTAINER venkat venkat.williams@gmail.com
 
 #install yum repos
 RUN yum update -y &&\
-    yum install -y which wget git java-1.8.0-oraclejdk python && yum clean all
+    yum install -y which wget git java-1.8.0-openjdk python && yum clean all
 
-ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0-oraclejdk
+ENV JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk
 RUN export JAVA_HOME
 
 ENV NIFI_VERSION=1.0.1 \
